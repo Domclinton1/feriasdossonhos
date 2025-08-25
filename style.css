@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #3cd7ca, rgb(138, 232, 138));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+nav.navbar {
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1d1d1d;
+  z-index: 1100;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  
+}
+
+/* Links desktop */
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+nav a:hover {
+  letter-spacing: 0.01rem;
+  color: rgb(138, 232, 138);
+}
+
+/* Botão hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1201;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .hamburger span {
+    background: linear-gradient(to right, #fff, rgb(138, 232, 138));
+  }
+
+  /* Menu lateral */
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    width: 260px;
+    background-color: #1d1d1d;
+    padding: 80px 20px;
+    text-align: right;
+    z-index: 1200;
+    transition: right 0.3s ease;
+  }
+  .menu a {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    background: linear-gradient(to right, #fff, rgb(138, 232, 138));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .menu.active {
+    right: 0;
+  }
+
+  /* Overlay */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 800;
+    display: none;
+  }
+  .menu-overlay.active {
+    display: block;
+  }
+}
+main {
+    background-color: #1d1d1d;
+}
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #F7F9FB;
+}
+p {
+    font-family: 'Lato', sans-serif;
+    color: #1d1d1d;
+}
+.btn {
+    background-color: rgb(49, 236, 49);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #F7F9FB;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+.container {
+    max-width: 1200px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 0 auto;
+}
+.hero {
+    margin: 0;
+    max-width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.7)), url(./assets/images/o-que-fazer-em-angradosreis4-ilhacataguas3.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    height: 80vh;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to top, rgba(68, 68, 56, 0.6), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+.hero h1 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 3rem;
+  color: #F7F9FB;
+  font-size: 3rem;
+  margin-top: 50px;
+  background: linear-gradient(to right, #fff, rgb(138, 232, 138));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+    font-size: 2rem;
+    color: #F7F9FB;
+    font-family: 'Lato', sans-serif;
+}
+.hero ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.hero ul li {
+    color: #F7F9FB;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    border-radius: 15px;
+    background-color: #3cd7ca;
+    padding: 7px;
+    max-width: fit-content;
+    box-shadow: 3px 5px 3px #000;
+}
+/*Fim da sesão hero / inicio da sessão imóveis*/
+.imoveis p {
+    color: #1d1d1d;
+    font-size: 1.5rem;
+    text-align: center;   
+}
+
+.gallery {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 10s linear;
+    }
+
+    /* Zoom infinito: sempre em movimento */
+    .main-image img.zoom {
+      transform: scale(1.2);
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .thumbnail {
+      flex: 0 0 auto;
+      width: 120px;
+      height: 80px;
+      overflow: hidden;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.3s, opacity 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+.about-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-content {
+  flex: 1 1 400px;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-button {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.about-button:hover {
+  background: #0056b3;
+}
+
+    .reviews-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .reviews-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .review-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .review-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .review-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .review-content {
+      flex: 1;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .review-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .review-date {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .review-stars {
+      color: #fbbc04;
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+
+    .review-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+.cta-section {
+      background: linear-gradient(135deg, #2d6cdf, #4eb5f1);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: #2d6cdf;
+      background: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #e5e5e5;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 600px) {
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+      .cta-section p {
+        font-size: 1rem;
+      }
+    }
+
+
+
+.faq-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.faq-item {
+  max-width:  900px;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.faq-question {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.faq-question:hover {
+  background: #f0f0f0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 20px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px; /* espaço para resposta longa */
+  padding: 15px 20px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg); /* muda de "+" para "x" */
+}
+footer {
+    background-color: #1d1d1d;
+    color: #F7F9FB;
+    text-align: center;
+    padding: 20px;
+}
+footer p {
+    font-size: 1.5rem;
+}
+footer em {
+    font-size: 1.3rem;
+}
