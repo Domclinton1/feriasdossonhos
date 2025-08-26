@@ -15,6 +15,9 @@ h2 {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+h1 {
+  line-height: 1;
+}
 
 /* Navbar */
 nav.navbar {
@@ -534,4 +537,27 @@ footer p {
 }
 footer em {
     font-size: 1.3rem;
+}
+
+
+@media screen and (max-width: 1020px) {
+  .hero .container {
+    gap: 1rem;
+    margin-top: 20px;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 20px;
+  }
+  .hero ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+  .hero li {
+    width: 150px;
+    font-size: 10px;
+  }
 }
