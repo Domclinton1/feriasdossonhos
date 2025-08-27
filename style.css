@@ -56,9 +56,11 @@ nav a {
 }
 nav a:hover {
   letter-spacing: 0.01rem;
-  color: rgb(138, 232, 138);
+  color: #ff385c;
 }
-
+nav .btn:hover {
+  color: #fff;
+}
 /* Botão hambúrguer */
 .hamburger {
   display: none;
