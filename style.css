@@ -41,7 +41,9 @@ nav.navbar {
   transition: transform 0.3s ease, background-color 0.3s ease;
   
 }
-
+.logo img {
+  width: 66px;
+}
 /* Links desktop */
 .menu {
   display: flex;
@@ -87,7 +89,7 @@ nav .btn:hover {
   .hamburger span {
     color: #ff385c;
   }
-
+  
   /* Menu lateral */
   .menu {
     flex-direction: column;
@@ -608,7 +610,7 @@ footer a i {
   }
   .hero .container {
     gap: 1rem;
-    margin-top: 20px;
+    margin-top: 40px;
     max-width: max-content;
   }
   .hero h1 {
