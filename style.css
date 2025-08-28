@@ -21,7 +21,9 @@ h1 {
   text-transform: uppercase;
   
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* Navbar */
 nav.navbar {
   width: 100%;
@@ -545,6 +547,7 @@ p {
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 15px;
+  color: #F7F9FB;
 }
 
 .faq-question {
